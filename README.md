@@ -31,7 +31,7 @@ An automated testing suite uses numerical central differences to independently v
 - **Simplifier**: folds constants and removes identities such as `x + 0`, `x * 1`, `x * 0` and `x ^ 1`.
 - **Built-in tests**: an automatic test suite you can run from the menu.
 
-## Building and running
+## Building and running (Windows)
 
 Any C++17 compiler will do. With g++:
 
