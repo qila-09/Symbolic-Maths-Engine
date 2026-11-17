@@ -2,6 +2,26 @@
 
 A command-line program written in C++ that parses a mathematical expression in one variable, `x`, and then differentiates it symbolically, integrates it symbolically, or approximates a definite integral numerically.
 
+**Programming language:** C++ (C++17)
+
+**Purpose and main functionality:**
+
+A command-line mathematical engine that parses mathematical expressions in one variable (`x`) and performs symbolic differentiation, symbolic integration and numerical integration using Simpson's rule.
+
+**Scale and structure:**
+
+The project is organised into three source files (`main.cpp`, `parser.cpp` and `expression.cpp`) and a shared header file (`classes.h`). It contains several classes, structures and recursive functions responsible for parsing and manipulating mathematical expressions.
+
+**Object-oriented programming:**
+
+The project uses classes to organise the parser and mathematical expression functionality, with encapsulation separating different responsibilities. Expression trees are managed using `unique_ptr`, providing automatic memory management and ownership of child nodes.
+
+**Data structures and algorithms:**
+
+The central data structure is a binary expression tree, allowing mathematical expressions to be represented and manipulated recursively. The project also implements a recursive-descent parser, symbolic differentiation algorithms, rule-based symbolic integration and Simpson's numerical integration method.
+
+An automated testing suite uses numerical central differences to independently verify symbolic differentiation and checks symbolic antiderivatives by differentiating them.
+
 ## Features
 
 - **Expression parser**: reads expressions such as `x^3 + 2*x` or `sin(3*x + 1)` into an expression tree, with correct operator precedence and brackets.
@@ -16,8 +36,7 @@ A command-line program written in C++ that parses a mathematical expression in o
 Any C++17 compiler will do. With g++:
 
 ```
-g++ -std=c++17 -o engine main.cpp parser.cpp expression.cpp
-./engine
+g++ -std=c++17 source/main.cpp source/parser.cpp source/expression.cpp -o engine
 ```
 
 ## Using the program
