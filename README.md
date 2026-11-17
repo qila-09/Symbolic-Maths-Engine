@@ -36,7 +36,10 @@ An automated testing suite uses numerical central differences to independently v
 Any C++17 compiler will do. With g++:
 
 ```
+git clone https://github.com/qila-09/Symbolic-Maths-Engine.git
+cd Symbolic-Maths-Engine
 g++ -std=c++17 source/main.cpp source/parser.cpp source/expression.cpp -o engine
+.\engine.exe
 ```
 
 ## Using the program
